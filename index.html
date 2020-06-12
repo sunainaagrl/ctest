@@ -1,1 +1,34 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/Custom Properties</title>
+    <style>
+        :root{
+            color: red; /* Global variable is declared in root and it applies everywhere in the web page*/
+            --maxw: 333px;
+        }
+        .box{
+            --box-color: violet; /* local variable in CSS */
+            width: 200px;
+            height: 200px;
+            background-color: var(--box-color);
+            margin: 15px;
+            border: 2px solid steelblue;
+            box-shadow: 3px 3px var(--box-color);
+        }
+        .container{
+            display: flex;
+            max-width: var(--maxw);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hello</div>
+        <div class="box">Hi</div>
+        <div class="box">Bye-Bye</div>
+    </div>
+</body>
+</html>
